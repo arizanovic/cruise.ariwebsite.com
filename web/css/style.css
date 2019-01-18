@@ -1,0 +1,21 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    background-image: url("../img/cruiser_pool_1920.jpg" );
+    /*background-size: 100%;*/
+    background-repeat: repeat-y;    
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+
+}
+
+#background{
+    width: 90%;
+    position: absolute;
+    left: 0px;
+
+}
+
