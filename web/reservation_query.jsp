@@ -104,7 +104,6 @@
     <head>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/reservation.css">
-        <link rel="stylesheet" href="css/temp.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
@@ -114,8 +113,11 @@
         <%if (!role.equals("0") && !role.equals("1")) {
                 response.sendRedirect("forbidden.jsp");
             }%>
-        <br><br><br><br><br><br><br><br><br>
-        <div id="reservationTable">
+
+            <div id="wrapper">
+        
+        
+        <div id="reservationTable_q">
             <%=convertListToTableQuery(reserv_q)%>
         </div>
         <div id="reservationTable">
@@ -198,9 +200,11 @@
             <p>*Room prices are expressed in Euros per person per day</p>
         </div>
 
+            </div>
 
         <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/reservation.js"></script>
 
     </body>
+    
 </html>

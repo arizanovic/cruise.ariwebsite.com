@@ -68,8 +68,10 @@
         <%if (!role.equals("0") && !role.equals("1")) {
                 response.sendRedirect("forbidden.jsp");
             }%>
-        <br><br><br><br><br><br><br><br><br>
-        <div id="reservationTable">
+
+            <div id="wrapper">
+            
+        <div id="reservationTableReservation">
             <%=convertListToTable(reserv)%>
         </div>
         <br><br>
@@ -148,7 +150,7 @@
             <p>*sve cene su izrazene u eurima po osobi</p>
             <p>*cene soba su izrazene u eurima po osobi za jedan dan</p>
         </div>
-        <br><br><br><br><br><br><br><br>
+            </div>
 
 
         <%@include file="footer.jsp" %>

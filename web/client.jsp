@@ -60,8 +60,7 @@
         <script src="js/navBar.js"></script> 
     </head>
     <body>
-        <%@include file="temp.jsp" %>
-        <%@include file="exchangeRate.jsp" %>
+
         <%@include file="navBar.jsp" %>
         <%if (!role.equals("0") && !role.equals("1")) {
                 response.sendRedirect("forbidden.jsp");

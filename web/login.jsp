@@ -15,7 +15,6 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="css/temp.css">
         <script src="js/navBar.js"></script> 
     </head>
     <body>
