@@ -2,19 +2,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/temp.css">
+        <link rel="stylesheet" href="css/style_index.css">
+        <link rel="stylesheet" href="css/underConstructionForbidden.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
 
         <%@include file="navBar.jsp" %>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="wrapperf">
         <div id="under_construction_logo"><img src="img/cruise_logo_stroke_forbidden.png" width="90%" onclick="window.location.href = 'index.jsp'"></div>
-        
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
         
         <%@include file="footer.jsp" %>
     </body>
