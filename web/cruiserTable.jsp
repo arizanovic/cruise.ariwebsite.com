@@ -52,8 +52,8 @@
                     <%=deparr.get(i).getArrival()%></p>               
                 </option>
                 <% } %>
-            </select>                                                  
-            <input id="input_submit_da" type="submit" value="SUBMIT">           
+            </select>                                              
+            <span><input id="input_submit_da" type="submit" value="SUBMIT"></span>       
         </form>
 
         <div id="cruiser_wrapper">
