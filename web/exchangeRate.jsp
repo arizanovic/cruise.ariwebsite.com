@@ -1,7 +1,7 @@
 <%@page import="model.Bank"%>
 <%@page import="database.DBQueries"%>
 <% Bank ban = DBQueries.getBankLastRate(); %>
-<link rel="stylesheet" href="css/exchangeRate.css">
+
 
 <div id="nbs">      
       <a href="https://www.nbs.rs/kursnaListaModul/zaDevize.faces?lang=lat"><table id="nbs_tab">

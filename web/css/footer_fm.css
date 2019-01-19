@@ -11,9 +11,7 @@
 
 #newsletter_table{
     border-collapse: collapse; 
-    position: relative;
-    top: 20px;
-    left: 60px;
+    
 }
 
 #newsletter_table{
@@ -48,7 +46,7 @@
 
 #logo_footer{
     float: right;
-    padding-right: 23%;
+    padding-right: 30%;
     padding-top: 30px; 
     cursor: pointer;
 }
@@ -76,10 +74,9 @@ div#page {
 
 #AllRights{
     float: right;
-    padding-right: 22%; 
+    padding-right: 27%;
     cursor: pointer;    
     color: #d9d9d9;
-    text-shadow: 2px 2px 5px grey;
     font-size: 12px;
 }
 
@@ -99,7 +96,7 @@ div#page {
 }
 
 #social_networks{
-    float: left;
+    float: bottom;
     padding-left: 58px; 
     padding-top: 60px;
     cursor: pointer;
@@ -129,11 +126,91 @@ div#page {
 }
 
 #not_valid_footer{
-    position: relative;
-    right: 150px;
-    top: 5px;
+
 }
 
 #pointer{
     cursor: pointer;
 }
+
+/***V*******footer grid*******V****/
+
+
+
+#footer_wrapper {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 23% 50% 23%;  
+    grid-template-rows: 180px;    
+}
+
+
+.aa {
+    grid-column: 1 ;
+    grid-row: 1;   
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150%;
+    color: #fff;
+    padding: 20px; 
+}
+
+
+.bb {
+    grid-column: 2 ;
+    grid-row: 1 ;   
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150%;
+    color: #fff;
+    padding: 20px; 
+}
+
+
+
+.cc {
+    grid-column: 3 ;
+    grid-row: 1 ;  
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150%;
+    color: #fff;
+    padding: 20px; 
+}
+
+
+
+
+
+/***^*******footer grid*******^****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

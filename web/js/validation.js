@@ -57,14 +57,3 @@ function validateFieldsNewsletterForm() {
     return false;
   }
 } 
-
-function validNewsletterEmailFunction() {
-    var check = document.getElementById("email_newsletter_text").value;
-    if (check.includes("@") && check.substring(check.lastIndexOf("@"), check.length).includes(".")) {
-        document.getElementById("not_valid_footer").innerHTML = "<p style='color:#66ff33;'>Username is valid</p>";
-        document.getElementById("submit").innerHTML = "<input type='submit' id='email_newsletter_submit' name='submit' value='SUBMIT'>";
-    } else {
-        document.getElementById("not_valid_footer").innerHTML = "<p style='color:red;'>Username is NOT valid!</p>";
-        document.getElementById("submit").innerHTML = "<input type='submit' id='email_newsletter_submit' name='submit' value='SUBMIT' disabled>";
-    }
-}

@@ -9,11 +9,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="css/style_index.css">
+
+        <link rel="stylesheet" media="screen and (min-width: 1440px)"  href="css/style_index.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 1440px)"  href="css/style_index_under1600.css"/>
         <link rel="stylesheet" href="css/temp.css">
     </head>
     <body>
-
+        <div class="main">
         <div class="wrapper">
             <div class="box a" onclick="window.location.href = 'underConstruction.jsp'">CASINO</div>
             <div class="box b" onclick="window.location.href = 'underConstruction.jsp'">UNDERWATER</div>
@@ -29,7 +31,7 @@
             <div class="box l" onclick="window.location.href = 'underConstruction.jsp'">CINEMA</div>
             <div class="box m" onclick="window.location.href = 'underConstruction.jsp'">FITNESS</div>
         </div>
-
+        </div>
 
         <%@include file="navBar.jsp" %>
         <%@include file="nbs.jsp" %>
