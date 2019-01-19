@@ -8,7 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%@include file="temp.jsp" %>
+
         <%@include file="navBar.jsp" %>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div id="under_construction_logo"><img src="img/cruise_logo_stroke_forbidden.png" width="90%" onclick="window.location.href = 'index.jsp'"></div>
