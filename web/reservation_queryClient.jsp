@@ -49,7 +49,6 @@
     <head>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/reservation.css">
-        <link rel="stylesheet" href="css/temp.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
@@ -58,8 +57,8 @@
         <%@include file="exchangeRate.jsp" %>
         <%@include file="navBar.jsp" %>
 
-        <br><br><br><br><br><br><br><br><br>
 
+<div id="wrapper">
 
         <div id="reservationInput">
             <form ACTION="Reservation_queryClientInsertServlet" method="POST" onsubmit="return validateFieldsReservationQueryClientForm()" name="myForm" >
@@ -134,20 +133,12 @@
 
 
 
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br>
         <div id="reservation_notice">
             <p>*All prices are expressed in Euros per person</p>
             <p>*Room prices are expressed in Euros per person per day</p>
         </div>
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
+</div>
+        
         <%@include file="footer.jsp" %>
         <script type="text/javascript" src="js/validation.js" ></script>
         <script type = "text/javascript" src="js/reservation.js"></script>

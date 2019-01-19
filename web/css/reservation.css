@@ -1,12 +1,16 @@
+#wrapper{
+    height: 1270px;
+}
+
 #reservationInput {
     font-size: 12px;
     font-weight: 600;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width: 330px;
+    width: 20%;
     position: absolute;
-    top: 170px;
+    top: 120px;
     
     
 }
@@ -83,10 +87,11 @@
 }
 
 #reservationQueryClientImg{
-    box-shadow: 4px 4px 6px 7px #ccc;   
-    float: left;
+    box-shadow: 4px 4px 6px 7px #ccc;       
     position: relative;
-    left: 400px;    
+    left: 27%;
+    top: 10%;
+    width: 55%
     
 }
 
@@ -119,4 +124,25 @@
     background: rgba(255,255,255,0.5);
     border: none;
     
+}
+
+#kosutnjak{
+    float: right;
+    opacity: 0.5;
+    padding-top: 100px;
+}
+
+#kosutnjak a{
+    text-decoration: none;
+}
+
+#kosutnjak_p{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#kosutnjak_tab{
+    background: rgba(255,255,255,0.5);
 }

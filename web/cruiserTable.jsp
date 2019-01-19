@@ -24,6 +24,8 @@
         das = gen.toString();
     } catch (Exception e) {
     }
+    int dass = Integer.parseInt(das);
+    int dasint = dass-1;
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -44,7 +46,7 @@
         <br><br><br><br><br><br>
 
         <form action="CruiserTableJavaServlet" method="get" id="input_da">
-            <p> DEPARTURE-ARRIVAL:   </p>
+            <span>DEPARTURE-ARRIVAL:</span>
             <select id="input_text_da" name="departure_arrival_id" <!--onchange="cruTabValue()"--> > 
                 <% for (int i = 0; i < deparr.size(); i++) {%>
                 <option value="<%=deparr.get(i).getId()%>"> 
@@ -53,9 +55,11 @@
                 </option>
                 <% } %>
             </select>                                              
-            <span><input id="input_submit_da" type="submit" value="SUBMIT"></span>       
+            <span><input id="input_submit_da" type="submit" value="SUBMIT"></span> 
+            <h2>Selected travel period from:  &nbsp<%=deparr.get(dasint).getDeparture()%> &nbsp to  &nbsp <%=deparr.get(dasint).getArrival()%>. Please select a free room.</h2>
         </form>
 
+        <div id="all_wrapper">
         <div id="cruiser_wrapper">
 
 
@@ -206,8 +210,8 @@
                     <% }%>
             </div>
         </div>
-            
-
+        </div>
+           
         <%@include file="navBar.jsp" %>
         <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/cruiserTable.js"></script>

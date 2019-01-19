@@ -9,7 +9,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-
         <link rel="stylesheet" media="screen and (min-width: 1440px)"  href="css/style_index.css"/>
         <link rel="stylesheet" media="screen and (max-width: 1440px)"  href="css/style_index_under1600.css"/>
         <link rel="stylesheet" href="css/temp.css">

@@ -5,21 +5,28 @@
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width: 300px;
+    padding-bottom: 0px;
+    width: 930px;
+    position: absolute;
+    left: 48%;
+    top: 100px;
+    margin-right: -52%;
+    transform: translate(-50%, 0%);
 }
 
 #input_text_da {
-    width: 100%;
+    width: 35%;
     padding: 8px 20px;
-    margin: 8px 0;
+    margin-left: 30px;
+    margin-right: 100px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;        
+    box-sizing: border-box;  
 }
 
 #input_submit_da {
-    width: 100%;
+    width: 35%;
     background-color: #9bbfdd;
     color: white;
     padding: 14px 20px;
@@ -39,15 +46,21 @@
 }
 
 /*---input^^^---*/
-
+#all_wrapper{
+   height: 1400px; 
+}
 
 #cruiser_wrapper{
     background-image: url("../img/cruise_schema_transparent_whiteText.png");
     background-repeat: no-repeat;
     width: 1024px;
     height: 1200px;
-    margin-left: 200px;
-    
+    position: absolute;
+    left: 48%;
+    top: 240px;
+    margin-right: -52%;
+    transform: translate(-50%, 0%);
+  
 }
 
 #underline{
