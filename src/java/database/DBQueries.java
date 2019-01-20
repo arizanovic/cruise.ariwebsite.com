@@ -294,7 +294,6 @@ public class DBQueries {
         return true;
     }
 
-
     public static Room getRoomData(int room_id) throws SQLException {
         String upit = "select * from room where id=?";
         Connection baza = DBConnection.getConn();
@@ -327,8 +326,8 @@ public class DBQueries {
         Meal m = new Meal(rs.getInt(1), rs.getInt(2), rs.getString(3));
         return m;
     }
-    
-public static ArrayList<Reservation> getReservations() throws SQLException {
+
+    public static ArrayList<Reservation> getReservations() throws SQLException {
         ArrayList<Reservation> reservations = new ArrayList<Reservation>();
 
         String upit = "SELECT res.id, res.datetime,  c.firstname, c.lastname, ro.number, a.type, m.type, b.eur_mid, da.departure, da.arrival, res.price, u.username\n"
@@ -354,7 +353,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
             Room room = new Room();
             DepartureArrival departurearrival = new DepartureArrival();
             Reservation reservation = new Reservation();
-            
+
             reservation.setId(rs.getInt(1));
             reservation.setDatetime(rs.getDate(2));
             client.setFirstname(rs.getString(3));
@@ -379,7 +378,6 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return reservations;
     }
-
 
     //provera da li je vikend, ako je vikend, reci ta je tacno da postoji lista na danasnji dan, ako nije vikend proveri da li posotji lista sa danasnjim danom
     public static boolean checkBankDate()
@@ -411,7 +409,6 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         String upit = "insert into reservation_query (client_id, room_id, activity_id, meal_id, bank_id, departure_arrival_id, price) values (?, ?, ?, ?, ?, ?, ?);";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
-
 
         pst.setInt(1, r.getClient().getId());
         pst.setInt(2, r.getRoom().getId());
@@ -454,7 +451,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
             Room room = new Room();
             DepartureArrival departurearrival = new DepartureArrival();
             Reservation_query reservation = new Reservation_query();
-            
+
             reservation.setId(rs.getInt(1));
             reservation.setDatetime(rs.getDate(2));
             client.setFirstname(rs.getString(3));
@@ -467,8 +464,6 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
             departurearrival.setArrival(rs.getDate(10));
             reservation.setPrice(rs.getDouble(11));
 
-
-
             reservation.setClient(client);
             reservation.setRoom(room);
             reservation.setActivity(activity);
@@ -479,6 +474,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return reservations;
     }
+
     //koristi se za dobijanje id-a klijenta da bi se odradio upit rezervacije
     public static Client getLastClientId() throws SQLException {
         String upit = "select id from client order by id desc limit 1;";
@@ -489,8 +485,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         Client c = new Client(rs.getInt(1));
         return c;
     }
-    
-    
+
     public static Reservation_query getReservation_queryById(int reservationQueryId) throws SQLException {
         String upit = "select * from reservation_query where id=?";
         Connection baza = DBConnection.getConn();
@@ -500,51 +495,51 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         rs.next();
         Reservation_query rq = new Reservation_query(rs.getInt(1));
         User user = new User(rs.getInt(3));
-        rq.setUser(user);        
-            Client client = new Client(rs.getInt(4));
-            rq.setClient(client);          
-            Room room = new Room(rs.getInt(5));
-            rq.setRoom(room);            
-            Activity activity = new Activity(rs.getInt(6));
-            rq.setActivity(activity);            
-            Meal meal = new Meal(rs.getInt(7));
-            rq.setMeal(meal);           
-            Bank bank = new Bank(rs.getInt(8));
-            rq.setBank(bank);            
-            DepartureArrival departurearrival = new DepartureArrival(rs.getInt(9));
-            rq.setDeparturearrival(departurearrival);            
-            rq.setPrice(rs.getDouble(10));       
+        rq.setUser(user);
+        Client client = new Client(rs.getInt(4));
+        rq.setClient(client);
+        Room room = new Room(rs.getInt(5));
+        rq.setRoom(room);
+        Activity activity = new Activity(rs.getInt(6));
+        rq.setActivity(activity);
+        Meal meal = new Meal(rs.getInt(7));
+        rq.setMeal(meal);
+        Bank bank = new Bank(rs.getInt(8));
+        rq.setBank(bank);
+        DepartureArrival departurearrival = new DepartureArrival(rs.getInt(9));
+        rq.setDeparturearrival(departurearrival);
+        rq.setPrice(rs.getDouble(10));
         return rq;
     }
-    
+
     public static boolean deleteReservation_query(int reservationQueryId) throws SQLException {
         String upit = "delete from reservation_query where id=?;";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
-        
+
         pst.setInt(1, reservationQueryId);
         try {
             pst.execute();
-        } catch (SQLException ex) {            
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return true;
     }
-    
+
     public static boolean deleteReservation(int reservationQueryId) throws SQLException {
         String upit = "delete from reservation where id=?;";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
-        
+
         pst.setInt(1, reservationQueryId);
         try {
             pst.execute();
-        } catch (SQLException ex) {            
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return true;
     }
-    
+
     public static boolean insertSuggestion(Suggestion s) throws SQLException {
         String upit = "insert into suggestion (name, email, comment, user_id) values(?,?,?,?);";
         Connection baza = DBConnection.getConn();
@@ -554,7 +549,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         pst.setString(2, s.getEmail());
         pst.setString(3, s.getComment());
         pst.setInt(4, s.getUser().getId());
-        
+
         try {
             pst.execute();
         } catch (SQLException ex) {
@@ -562,7 +557,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return true;
     }
-    
+
     public static boolean insertSuggestionWithoutUserId(Suggestion s) throws SQLException {
         String upit = "insert into suggestion (name, email, comment) values(?,?,?);";
         Connection baza = DBConnection.getConn();
@@ -571,7 +566,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         pst.setString(1, s.getName());
         pst.setString(2, s.getEmail());
         pst.setString(3, s.getComment());
-        
+
         try {
             pst.execute();
         } catch (SQLException ex) {
@@ -579,15 +574,15 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return true;
     }
-    
+
     public static boolean insertNewsletter(Newsletter n) throws SQLException {
         String upit = "insert into newsletter (email, user_id) values(?,?);";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
 
-        pst.setString(1, n.getEmail());        
+        pst.setString(1, n.getEmail());
         pst.setInt(2, n.getUser().getId());
-        
+
         try {
             pst.execute();
         } catch (SQLException ex) {
@@ -595,14 +590,14 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return true;
     }
-    
+
     public static boolean insertNewsletterWithoutUserId(Newsletter n) throws SQLException {
         String upit = "insert into newsletter (email) values(?);";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
 
         pst.setString(1, n.getEmail());
-        
+
         try {
             pst.execute();
         } catch (SQLException ex) {
@@ -610,7 +605,7 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         }
         return true;
     }
-    
+
     public static Reservation_query getNumberOfRowsForNotification() throws SQLException {
         String upit = "SELECT *, count(*) FROM reservation_query;";
         Connection baza = DBConnection.getConn();
@@ -620,8 +615,8 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
         Reservation_query rq = new Reservation_query(rs.getInt(1), rs.getInt(11));
         return rq;
     }
-    
-        public static boolean checkReservationByRoomIdAndDeparrId(Reservation r) throws SQLException {
+
+    public static boolean checkReservationByRoomIdAndDeparrId(Reservation r) throws SQLException {
         String upit = "select count(*) from reservation where room_id= ? and departure_arrival_id= ? ;";
         Connection baza = DBConnection.getConn();
         PreparedStatement pst = baza.prepareStatement(upit);
@@ -638,4 +633,72 @@ public static ArrayList<Reservation> getReservations() throws SQLException {
     }
     
 
+    
+    public static Reservation getReservationById(int reservationId) throws SQLException {
+        String upit = "SELECT res.id, res.datetime,  c.firstname, c.lastname, c.gender, c.age, c.passport, c.city, c.street, c.house_n, \n"
+                + "ro.number, ro.price, ro.type, a.type, a.price, m.type, m.price, b.eur_mid, da.departure, da.arrival, u.firstname, u.lastname, res.price\n"
+                + "                                   FROM reservation res\n"
+                + "                                    join client c on c.id = res.client_id\n"
+                + "                                    join user u on u.id = res.user_id\n"
+                + "                                    join activity a on a.id = res.activity_id\n"
+                + "                                    join meal m on m.id = res.meal_id\n"
+                + "                                    join bank b on b.id = res.bank_id\n"
+                + "                                    join departurearrival da on da.id = res.departure_arrival_id\n"
+                + "                                    join room ro on ro.id = res.room_id\n"
+                + "                                     where res.id=?\n"
+                + "                                     order by res.id desc;";
+        Connection baza = DBConnection.getConn();
+        PreparedStatement pst = baza.prepareStatement(upit);
+        pst.setInt(1, reservationId);
+        ResultSet rs = pst.executeQuery();
+        rs.next();
+
+            Client client = new Client();
+            client.setFirstname(rs.getString(3));
+            client.setLastname(rs.getString(4));
+            client.setGender(rs.getString(5));
+            client.setAge(rs.getInt(6));
+            client.setPassport(rs.getString(7));
+            client.setCity(rs.getString(8));
+            client.setStreet(rs.getString(9));
+            client.setHouse_n(rs.getInt(10));
+            
+
+            Room room = new Room();
+            room.setNumber(rs.getInt(11));
+            room.setPrice(rs.getInt(12));
+            room.setType(rs.getString(13));
+            
+
+            Activity activity = new Activity();
+            activity.setType(rs.getString(14));
+            activity.setPrice(rs.getInt(15));
+            
+
+            Meal meal = new Meal();
+            meal.setType(rs.getString(16));
+            meal.setPrice(rs.getInt(17));
+            
+
+            Bank bank = new Bank();
+            bank.setEur_mid(rs.getDouble(18));
+            
+
+            DepartureArrival departurearrival = new DepartureArrival();
+            departurearrival.setDeparture(rs.getDate(19));
+            departurearrival.setArrival(rs.getDate(20));
+            
+
+            User user = new User();
+            user.setFirstname(rs.getString(21));
+            user.setLastname(rs.getString(22));
+
+           
+            Reservation r = new Reservation(rs.getInt(1), rs.getDate(2), client, room, activity, meal, bank, departurearrival, user, rs.getDouble(23));
+            
+            return r;
+        }
+
+
+    
 }

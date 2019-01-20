@@ -25,6 +25,20 @@ public class Reservation {
     public Reservation(int id) {
         this.id = id;
     }
+
+    public Reservation(int id, Date datetime, User user, Client client, Room room, Activity activity, Meal meal, Bank bank, DepartureArrival departurearrival, double price) {
+        this.id = id;
+        this.datetime = datetime;
+        this.user = user;
+        this.client = client;
+        this.room = room;
+        this.activity = activity;
+        this.meal = meal;
+        this.bank = bank;
+        this.departurearrival = departurearrival;
+        this.price = price;
+    }
+    
     
      
 
@@ -53,6 +67,19 @@ public class Reservation {
         this.departurearrival = departurearrival;
         this.price = price;
         this.reservation_query = reservation_query;
+    }
+
+    public Reservation(int id, Date datetime, Client client, Room room, Activity activity, Meal meal, Bank bank, DepartureArrival departurearrival, User user, double price) {
+        this.id = id;
+        this.datetime = datetime;
+        this.client = client;
+        this.room = room;
+        this.activity = activity;
+        this.meal = meal;
+        this.bank = bank;
+        this.departurearrival = departurearrival;
+        this.user = user;       
+        this.price = price;
     }
 
     public Reservation_query getReservation_query() {

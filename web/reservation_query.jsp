@@ -58,7 +58,8 @@
 <%!
     public static String convertListToTable(List<Reservation> reserv) {
         String html = "<table id=\"client_user\">";
-        html += "<tr><th> Id </th>";
+        html += "<tr><th> Voucher </th>";
+        html += " <th> Id </th>";
         html += " <th> Insert time </th>";
         html += " <th> First name </th>";
         html += " <th> Last name </th>";
@@ -74,6 +75,7 @@
 
         for (int i = 0; i < reserv.size(); i++) {
             html += "<tr>";
+            html += "<td><a href='VoucherServlet?reservationId=" + reserv.get(i).getId() + "'><img src='img/voucher_v_button.png' height='50px'></a></td>";
             html += "<td>" + reserv.get(i).getId() + "</td>";
             html += "<td>" + reserv.get(i).getDatetime() + "</td>";
             html += "<td>" + reserv.get(i).getClient().getFirstname() + "</td>";
@@ -114,97 +116,97 @@
                 response.sendRedirect("forbidden.jsp");
             }%>
 
-            <div id="wrapper">
-        
-        
-        <div id="reservationTable_q">
-            <%=convertListToTableQuery(reserv_q)%>
-        </div>
-        <div id="reservationTable">
-            <%=convertListToTable(reserv)%>
-        </div>
-        <br><br>
-
-        <div id="reservationInput">
-            <form ACTION="Reservation_queryServlet" method="POST">
-
-                <input id="bank" class="input_text" value="<%=bank.get(0).getId()%>" type="hidden" name="bank_id">                
-                <input id="username_reservation" class="input_text" value="<%=id%>" type="hidden" name="user_id">
-                <h2>BOOKING QUERY:</h2><br>
-                <p> DEPARTURE-ARRIVAL:
-                    <select class="input_text" id="departure_arrival_id" onchange="val()" name="departure_arrival_id"> 
-                        <% for (int i = 0; i < deparr.size(); i++) {%>
-                        <option value="<%=deparr.get(i).getId()%>"> 
-                        <%=deparr.get(i).getDeparture()%> <p> do </p>
-                        <%=deparr.get(i).getArrival()%>
-                        </option>
-                        <% } %>
-                    </select> 
-                </p>
-                <p> FREE ROOMS:  
-                    <select class="input_text" id="rooms" onchange="roomNumber()" name="room_id">
-
-                    </select> 
-                </p>
-                <p>ROOM PRICE:</p>
-                <input id="roomPrice" class="input_text" type="text" name="roomPrice">
+        <div id="wrapper">
 
 
-
-                <p> CLIENTS:   
-                    <select class="input_text" id="clients" name="client_id"> 
-                        <% for (int i = 0; i < clients.size(); i++) {%>
-                        <option value="<%=clients.get(i).getId()%>"> 
-                        <%=clients.get(i).getFirstname()%> <p> </p>
-                        <%=clients.get(i).getLastname()%>
-                        </option>
-                        <% } %>
-                    </select> 
-                </p>
-
-
-
-                <p> ACTIVITY:   
-                    <select class="input_text" id="activity" name="activity_id" onchange="activityNumber()"> 
-                        <% for (int i = 0; i < activities.size(); i++) {%>
-                        <option value="<%=activities.get(i).getId()%>"> 
-                            <%=activities.get(i).getType()%>
-                        </option>
-                        <% } %>
-                    </select> 
-                </p>
-                <p>ACTIVITY PRICE:</p>
-                <input id="activityPrice" class="input_text" type="text" name="activityPrice">
-
-
-
-                <p> FOOD:                      
-                    <select class="input_text" id="meal" name="meal_id" onchange="mealNumber()"> 
-                        <% for (int i = 0; i < meals.size(); i++) {%>
-                        <option value="<%=meals.get(i).getId()%>"> 
-                            <%=meals.get(i).getType()%>
-                        </option>
-                        <% }%>
-                    </select> 
-                </p>
-                <p>FOOD PRICE:</p>
-                <input id="mealPrice" class="input_text" type="text" name="mealPrice">
-
-
-
-                <input class="input_submit" id="input_submit" type="submit" name="submit" value="REZERVISI">           
-            </form>
-        </div>
-        <div id="reservation_notice">
-            <p>*All prices are expressed in Euros per person</p>
-            <p>*Room prices are expressed in Euros per person per day</p>
-        </div>
-
+            <div id="reservationTable_q">
+                <%=convertListToTableQuery(reserv_q)%>
             </div>
+            <div id="reservationTable">
+                <%=convertListToTable(reserv)%>
+            </div>
+            <br><br>
+
+            <div id="reservationInput">
+                <form ACTION="Reservation_queryServlet" method="POST">
+
+                    <input id="bank" class="input_text" value="<%=bank.get(0).getId()%>" type="hidden" name="bank_id">                
+                    <input id="username_reservation" class="input_text" value="<%=id%>" type="hidden" name="user_id">
+                    <h2>BOOKING QUERY:</h2><br>
+                    <p> DEPARTURE-ARRIVAL:
+                        <select class="input_text" id="departure_arrival_id" onchange="val()" name="departure_arrival_id"> 
+                            <% for (int i = 0; i < deparr.size(); i++) {%>
+                            <option value="<%=deparr.get(i).getId()%>"> 
+                            <%=deparr.get(i).getDeparture()%> <p> do </p>
+                            <%=deparr.get(i).getArrival()%>
+                            </option>
+                            <% } %>
+                        </select> 
+                    </p>
+                    <p> FREE ROOMS:  
+                        <select class="input_text" id="rooms" onchange="roomNumber()" name="room_id">
+
+                        </select> 
+                    </p>
+                    <p>ROOM PRICE:</p>
+                    <input id="roomPrice" class="input_text" type="text" name="roomPrice">
+
+
+
+                    <p> CLIENTS:   
+                        <select class="input_text" id="clients" name="client_id"> 
+                            <% for (int i = 0; i < clients.size(); i++) {%>
+                            <option value="<%=clients.get(i).getId()%>"> 
+                            <%=clients.get(i).getFirstname()%> <p> </p>
+                            <%=clients.get(i).getLastname()%>
+                            </option>
+                            <% } %>
+                        </select> 
+                    </p>
+
+
+
+                    <p> ACTIVITY:   
+                        <select class="input_text" id="activity" name="activity_id" onchange="activityNumber()"> 
+                            <% for (int i = 0; i < activities.size(); i++) {%>
+                            <option value="<%=activities.get(i).getId()%>"> 
+                                <%=activities.get(i).getType()%>
+                            </option>
+                            <% } %>
+                        </select> 
+                    </p>
+                    <p>ACTIVITY PRICE:</p>
+                    <input id="activityPrice" class="input_text" type="text" name="activityPrice">
+
+
+
+                    <p> FOOD:                      
+                        <select class="input_text" id="meal" name="meal_id" onchange="mealNumber()"> 
+                            <% for (int i = 0; i < meals.size(); i++) {%>
+                            <option value="<%=meals.get(i).getId()%>"> 
+                                <%=meals.get(i).getType()%>
+                            </option>
+                            <% }%>
+                        </select> 
+                    </p>
+                    <p>FOOD PRICE:</p>
+                    <input id="mealPrice" class="input_text" type="text" name="mealPrice">
+
+
+
+                    <input class="input_submit" id="input_submit" type="submit" name="submit" value="REZERVISI">           
+                </form>
+            </div>
+            <div id="reservation_notice">
+                <p>*All prices are expressed in Euros per person</p>
+                <p>*Room prices are expressed in Euros per person per day</p>
+            </div>
+
+        </div>
 
         <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/reservation.js"></script>
 
     </body>
-    
+
 </html>
