@@ -635,8 +635,8 @@ public class DBQueries {
 
     
     public static Reservation getReservationById(int reservationId) throws SQLException {
-        String upit = "SELECT res.id, res.datetime,  c.firstname, c.lastname, c.gender, c.age, c.passport, c.city, c.street, c.house_n, \n"
-                + "ro.number, ro.price, ro.type, a.type, a.price, m.type, m.price, b.eur_mid, da.departure, da.arrival, u.firstname, u.lastname, res.price\n"
+        String upit = "SELECT res.id, res.datetime,  c.firstname, c.lastname, c.gender, c.age, c.passport, c.city, c.street, c.house_n, c.phone, \n"
+                + "ro.number, ro.price, ro.type, a.type, a.price, m.type, m.price, b.eur_mid, b.date, da.departure, da.arrival, u.firstname, u.lastname, res.price\n"
                 + "                                   FROM reservation res\n"
                 + "                                    join client c on c.id = res.client_id\n"
                 + "                                    join user u on u.id = res.user_id\n"
@@ -662,39 +662,41 @@ public class DBQueries {
             client.setCity(rs.getString(8));
             client.setStreet(rs.getString(9));
             client.setHouse_n(rs.getInt(10));
+            client.setPhone(rs.getString(11));
             
 
             Room room = new Room();
-            room.setNumber(rs.getInt(11));
-            room.setPrice(rs.getInt(12));
-            room.setType(rs.getString(13));
+            room.setNumber(rs.getInt(12));
+            room.setPrice(rs.getInt(13));
+            room.setType(rs.getString(14));
             
 
             Activity activity = new Activity();
-            activity.setType(rs.getString(14));
-            activity.setPrice(rs.getInt(15));
+            activity.setType(rs.getString(15));
+            activity.setPrice(rs.getInt(16));
             
 
             Meal meal = new Meal();
-            meal.setType(rs.getString(16));
-            meal.setPrice(rs.getInt(17));
+            meal.setType(rs.getString(17));
+            meal.setPrice(rs.getInt(18));
             
 
             Bank bank = new Bank();
-            bank.setEur_mid(rs.getDouble(18));
+            bank.setEur_mid(rs.getDouble(19));
+            bank.setDate(rs.getDate(20));
             
 
             DepartureArrival departurearrival = new DepartureArrival();
-            departurearrival.setDeparture(rs.getDate(19));
-            departurearrival.setArrival(rs.getDate(20));
+            departurearrival.setDeparture(rs.getDate(21));
+            departurearrival.setArrival(rs.getDate(22));
             
 
             User user = new User();
-            user.setFirstname(rs.getString(21));
-            user.setLastname(rs.getString(22));
+            user.setFirstname(rs.getString(23));
+            user.setLastname(rs.getString(24));
 
            
-            Reservation r = new Reservation(rs.getInt(1), rs.getDate(2), client, room, activity, meal, bank, departurearrival, user, rs.getDouble(23));
+            Reservation r = new Reservation(rs.getInt(1), rs.getDate(2), client, room, activity, meal, bank, departurearrival, user, rs.getDouble(25));
             
             return r;
         }

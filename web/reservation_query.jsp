@@ -59,13 +59,13 @@
     public static String convertListToTable(List<Reservation> reserv) {
         String html = "<table id=\"client_user\">";
         html += "<tr><th> Voucher </th>";
+        html += " <th> Invoice </th>";
+        html += " <th> Bill </th>";
         html += " <th> Id </th>";
         html += " <th> Insert time </th>";
         html += " <th> First name </th>";
         html += " <th> Last name </th>";
         html += " <th> Room number </th>";
-        html += " <th> Activity </th>";
-        html += " <th> Food </th>";
         html += " <th> Exchange rate </th>";
         html += " <th> Departure </th>";
         html += " <th> Arrival </th>";
@@ -75,14 +75,14 @@
 
         for (int i = 0; i < reserv.size(); i++) {
             html += "<tr>";
-            html += "<td><a href='VoucherServlet?reservationId=" + reserv.get(i).getId() + "'><img src='img/voucher_v_button.png' height='50px'></a></td>";
+            html += "<td><a href='VoucherServlet?reservationId=" + reserv.get(i).getId() + "&voucherInvoiceBill=1'><img src='img/voucher_v_button.png' height='50px'></a></td>";
+            html += "<td><a href='VoucherServlet?reservationId=" + reserv.get(i).getId() + "&voucherInvoiceBill=2'><img src='img/invoice.png' height='50px'></a></td>";
+            html += "<td><a href='VoucherServlet?reservationId=" + reserv.get(i).getId() + "&voucherInvoiceBill=3'><img src='img/bill.png' height='50px'></a></td>";
             html += "<td>" + reserv.get(i).getId() + "</td>";
             html += "<td>" + reserv.get(i).getDatetime() + "</td>";
             html += "<td>" + reserv.get(i).getClient().getFirstname() + "</td>";
             html += "<td>" + reserv.get(i).getClient().getLastname() + "</td>";
             html += "<td>" + reserv.get(i).getRoom().getId() + "</td>";
-            html += "<td>" + reserv.get(i).getActivity().getType() + "</td>";
-            html += "<td>" + reserv.get(i).getMeal().getType() + "</td>";
             html += "<td>" + reserv.get(i).getBank().getEur_mid() + "</td>";
             html += "<td>" + reserv.get(i).getDeparturearrival().getDeparture() + "</td>";
             html += "<td>" + reserv.get(i).getDeparturearrival().getArrival() + "</td>";

@@ -22,6 +22,8 @@ public class VoucherServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             int reservation_id = Integer.parseInt(request.getParameter("reservationId"));
+            int voucherInvoiceBill = Integer.parseInt(request.getParameter("voucherInvoiceBill"));
+            
             //out.print("reservation_id" + reservation_id);
 
             request.getSession().setAttribute("reservation_id", reservation_id);
@@ -29,8 +31,15 @@ public class VoucherServlet extends HttpServlet {
             
            // String atype = r.getActivity().getType();
             //out.print(atype);
-            
+            if(voucherInvoiceBill == 1){
             response.sendRedirect("voucher.jsp");
+            }
+            if(voucherInvoiceBill == 2){
+            response.sendRedirect("invoice.jsp");
+            }
+            if(voucherInvoiceBill == 3){
+            response.sendRedirect("bill.jsp");
+            }
         }
     }
 

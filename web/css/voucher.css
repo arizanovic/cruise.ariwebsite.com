@@ -1,0 +1,95 @@
+body {
+  background: rgb(204,204,204); 
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+
+.wrapper {
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-columns: 70px 800px 250px; 
+    grid-template-rows: 400px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+
+.box {
+    border-radius: 10px;
+}
+
+.a {
+    grid-column: 1 ;
+    grid-row: 1;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    padding: 20px; 
+    background-image: url("../img/background_cruise1.jpg" );
+    background-size: 70px 400px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;  
+    border-right-style:dashed;  
+}
+
+
+.b {
+    grid-column: 2 ;
+    grid-row: 1 ;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 20px; 
+    background-image: url("../img/background_cruise2.jpg" );
+    background-size: 800px 400px;
+    border-right-style:dashed;
+}
+
+
+.c {
+    grid-column: 3 ;
+    grid-row: 1 ;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 20px; 
+    background-image: url("../img/background_cruise3-1.jpg" );
+    background-size: 250px 400px;
+}
+
+
+.voucher_label{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.voucher_data{
+    background-color: white;
+    opacity: 0.6;
+}
+
+#life{
+    float: left;
+    margin-top: 230px;
+    margin-left: 180px;
+    font-size: 26px;
+    color: black;
+    opacity: 0.4;
+    
+}
+
