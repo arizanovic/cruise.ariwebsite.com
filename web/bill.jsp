@@ -181,7 +181,6 @@
                 out.println(dateFormat1.format(r.getBank().getDate()));
             %><br>
                 *refundiranje u slucaju odustajanja se vrsi u visini od 70%, najkasnije mesec dana pre putovanja
-                *Napomena o poreskom oslobadjanju: Nema poreskog oslobadjanja
             <h4>Racun je placen avansno.</h4>
             </p>
         </div>
