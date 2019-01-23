@@ -42,21 +42,22 @@ page[size="A5"][layout="landscape"] {
 
 #logo{
     float: left;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 60px;
+    margin-top: 43px;
 }
 
 #companyData{
     float: right;
-    margin-right: 20px;
-    margin-top: 10px;
+    margin-right: 50px;
+    margin-top: 40px;
     font-size: 14px;
+        
 }
 
 #underLogo{
     float: left;
-    margin-left: 20px;
-    margin-top: 72px;
+    margin-left: 50px;
+    margin-top: 97px;
     position: absolute;
     font-size: 11px;
     font-weight: 600;
@@ -65,20 +66,32 @@ page[size="A5"][layout="landscape"] {
 
 #invoiceNumber{
     float: left;
-    margin-top: 120px;
-    margin-left: 20px;
+    margin-top: 190px;
+    margin-left: 50px;
+}
+
+#dateUser{
+    position: absolute;
+    margin-top: 335px;
+    margin-left: 50px;
+    
+    
 }
 
 #clientData{
     float: right;
-    margin-top: 56px;
-    margin-right: 70px;
+    margin-top: 106px;
+    margin-right: 50px;
+    border: 1px solid black;
+    height: 100px;
+    width: 240px;
+    padding: 30px;
 }
 
 #pricelist{
     float: left;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 
 #pricelist> table{
@@ -91,7 +104,24 @@ page[size="A5"][layout="landscape"] {
 
 #star{
     float: left;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 20px;
 }
 
+#invoiced{
+    position: absolute;
+    top: 900px; 
+    margin-left: 520px;
+    border-bottom: 1px solid black;
+    height: 70px;
+    width: 200px;
+    text-align: center;
+}
+
+#underInvoiced{
+    position: absolute;
+    top: 953px; 
+    margin-left: 520px;
+    text-align: center;
+    
+}

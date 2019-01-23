@@ -54,6 +54,13 @@
 
                 %></h3>
         </div>
+        
+        <div id="dateUser">
+            <p>Vreme fakturisanja: <%DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy. HH:mm:ss");
+                                 Date date1 = new Date();
+                                 out.println(dateFormat.format(date1));%>
+            </p>
+        </div>
 
         <div id="clientData">
             <p><%out.print(r.getClient().getFirstname() + " " + r.getClient().getLastname());%><BR>
@@ -169,8 +176,28 @@
             </table>
         </div>
         <div id="star">
-            <p>*cene se obracunavaju po srednjem kursu evra NBS na dan: <%=r.getBank().getDate()%></p>
+            <p>*cena je obracunata po srednjem kursu evra NBS na dan rezervacije: <%
+                DateFormat dateFormat1 = new SimpleDateFormat("dd.MM.yyyy.");               
+                out.println(dateFormat1.format(r.getBank().getDate()));
+            %><br>
+                *refundiranje u slucaju odustajanja se vrsi u visini od 70%, najkasnije mesec dana pre putovanja
+                *Napomena o poreskom oslobadjanju: Nema poreskog oslobadjanja
+            <h4>Faktura je placena avansno.</h4>
+            </p>
         </div>
+                
+                <div id="invoiced">
+                    <p>FAKTURISAO:</p>                                       
+                </div>
+                
+                <div id="underInvoiced">
+                    <p><%out.print(r.getUser().getFirstname() + " " + r.getUser().getFirstname());%><br>
+                        U Beogradu, <%DateFormat dateFormat2 = new SimpleDateFormat("dd.MM.yyyy.");
+                                 Date date3 = new Date();
+                                 out.println(dateFormat2.format(date3));%>
+                    </p>                                       
+                </div>
+                    
     </page>  
 </body>
 </html>
