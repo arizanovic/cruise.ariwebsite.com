@@ -11,9 +11,9 @@ import java.util.logging.Logger;
 public class DBConnection {
  private Connection conn = null;
     private String url
-     = "jdbc:mysql://localhost:3306/booking1";
+     = "jdbc:mysql://localhost:3306/dudb";
     private String user = "retardinjo";
-    private String password = "samsung";
+    private String password = "!S4MSUNG!";
     private static DBConnection instance = null;
     
     private DBConnection() throws SQLException {
