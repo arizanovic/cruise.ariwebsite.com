@@ -13,6 +13,7 @@
         }
     } catch (Exception e) {
         response.sendRedirect("index.jsp");
+        System.out.println("cruiserTable - catch!!!");
     }
 %>
 
@@ -22,7 +23,8 @@
 
         Object gen = request.getSession().getAttribute("departure_arrival_session");
         das = gen.toString();
-    } catch (Exception e) {
+    } catch (Exception ex) {
+        ex.printStackTrace();
     }
     int dass = Integer.parseInt(das);
     int dasint = dass-1;

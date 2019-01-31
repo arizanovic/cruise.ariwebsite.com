@@ -57,3 +57,12 @@ function validateFieldsNewsletterForm() {
     return false;
   }
 } 
+
+function validateSugesstionForm() {
+  var a = document.forms["myForm"]["sugEmail"].value;
+
+  if (a === "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+} 

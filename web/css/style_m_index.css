@@ -1,0 +1,315 @@
+body, html{
+    font-family: "Montserrat", sans-serif;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url("../img/cruiser_pool_1920x2000.jpg");      
+    background-size: 100%;
+    background-repeat: repeat-y;
+    
+}
+
+.main{
+    height: 1400px;
+    width: 100%;
+}
+
+/********grid dole**********/
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 200px 200px 200px;  
+    grid-template-rows: 130px 130px 130px 130px 130px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+    
+}
+
+.box {
+    
+    /*border-radius: 3px;*/
+        
+}
+
+.a {
+    grid-column: 1 ;
+    grid-row: 1;
+    background-image: url("../img/casino_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.a:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.b {
+    grid-column: 2 ;
+    grid-row: 1 ;
+    background-image: url("../img/underwater_ship_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.b:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.c {
+    grid-column: 3 ;
+    grid-row: 1/3 ;
+    background-image: url("../img/cruiser_night_615x400.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.c:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.e {
+    grid-column: 1/3;
+    grid-row: 2;
+    background-image: url("../img/kayak.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.e:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.f {
+    grid-column: 1;
+    grid-row: 3;
+    background-image: url("../img/clear_water_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.f:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+.g {
+    grid-column: 2;
+    grid-row: 3;
+    background-image: url("../img/private_paradise_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.g:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+.h {
+    grid-column: 3;
+    grid-row: 3;
+    background-image: url("../img/diving_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.h:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+.i {
+    grid-column: 1;
+    grid-row: 4;
+    background-image: url("../img/boat_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.i:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.j {
+    grid-column: 2 / 4 ;
+    grid-row: 4;
+    background-image: url("../img/massage_815x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.j:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+.k {
+    grid-column: 1;
+    grid-row: 5;
+    background-image: url("../img/restaurant_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.k:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+.l {
+    grid-column: 2;
+    grid-row: 5;   
+    background-image: url("../img/cinema_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.l:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+.m {
+    grid-column: 3;
+    grid-row: 5;
+    background-image: url("../img/gym_400x300.jpg" );
+    background-size: 100% 100%;
+    filter: brightness(80%);
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 90%;
+    color: #fff;
+    padding: 10px; 
+}
+
+.m:hover {
+    filter: brightness(100%);
+    transition-duration: 200ms;
+}
+
+#underline{
+    text-decoration: none;
+    
+}
+
+#underline:link, #underline:visited{
+    color: #444;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#under_construction_logo{
+    cursor: pointer;
+    float: left;
+    padding-top: 200px;
+}
+
+#nbs{
+    float: right;
+    padding-top: 50px;
+    opacity: 0.9; 
+
+}
+
+#nbs a{
+    text-decoration: none;
+}
+
+#nbs_p{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+}
+#nbs_date_p{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#nbs_tab{
+    background: rgba(255,255,255,0.5);
+    border: none;
+    
+}

@@ -13,6 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <script src="js/navBar.js"></script> 
+        <script type="text/javascript" src="js/validation.js" ></script>
     </head>
     <body>
         <%@include file="temp.jsp" %>
@@ -25,10 +26,10 @@
         </div>
         
         <div id='contactus'>
-            <form method="POST" action="SuggestionServlet" >
+            <form method="POST" action="SuggestionServlet"  onsubmit="return validateSugesstionForm()" name="myForm" >
 
                 <input id="name" class="input_form" type="text" name="sugName" placeholder="FIRST and LAST NAME">
-                <input id="email" class="input_form" type="text" name="sugEmail" placeholder="E-MAIL">
+                <input id="email" class="input_form" type="text" name="sugEmail" placeholder="E-MAIL" pattern="[a-zA-Z0-9]+[._a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]*[a-zA-Z]*@[a-zA-Z0-9]{2,8}.[a-zA-Z.]{2,6}" >
                 <textarea id="message" class="input_form" type="text" name="suggestion" placeholder="MESSAGE"></textarea>
                 <input id="submit" class="submit_form" type="submit" value="SEND YOUR SUGESTIONS" name="submit">
             </form>
@@ -52,6 +53,7 @@
         </div>
         <br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br>
+
         <%@include file="footer.jsp" %>
     </body>
 </html>
