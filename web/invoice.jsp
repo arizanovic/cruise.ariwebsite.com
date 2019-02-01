@@ -191,7 +191,7 @@
                 </div>
                 
                 <div id="underInvoiced">
-                    <p><%out.print(r.getUser().getFirstname() + " " + r.getUser().getFirstname());%><br>
+                    <p><%out.print(r.getUser().getFirstname() + " " + r.getUser().getLastname());%><br>
                         U Beogradu, <%DateFormat dateFormat2 = new SimpleDateFormat("dd.MM.yyyy.");
                                  Date date3 = new Date();
                                  out.println(dateFormat2.format(date3));%>
