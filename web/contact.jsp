@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/contact.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>cruise.ARIwebsite.com</title>
+        <link rel="shortcut icon" href="img/titl_ari.png"/>
         <script src="js/navBar.js"></script> 
         <script type="text/javascript" src="js/validation.js" ></script>
     </head>

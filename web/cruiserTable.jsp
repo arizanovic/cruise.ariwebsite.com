@@ -27,7 +27,7 @@
         ex.printStackTrace();
     }
     int dass = Integer.parseInt(das);
-    int dasint = dass-1;
+    int dasint = dass - 1;
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,8 +35,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-
+        <title>cruise.ARIwebsite.com</title>
+        <link rel="shortcut icon" href="img/titl_ari.png"/>
         <link rel="stylesheet" type="text/css" href="css/style_ct.css">
         <link rel="stylesheet" type="text/css" href="css/cruiserTable.css">
         <link rel="stylesheet" href="css/temp_cruiserTable.css">
@@ -50,170 +50,170 @@
         <form action="CruiserTableJavaServlet" method="get" id="input_da">
             <span>DEPARTURE-ARRIVAL:</span>
             <select id="input_text_da" name="departure_arrival_id" <!--onchange="cruTabValue()"--> > 
-                <% for (int i = 0; i < deparr.size(); i++) {%>
-                <option value="<%=deparr.get(i).getId()%>"> 
+                    <% for (int i = 0; i < deparr.size(); i++) {%>
+                    <option value="<%=deparr.get(i).getId()%>"> 
                 <p>&nbsp&nbsp from  &nbsp<%=deparr.get(i).getDeparture()%> &nbsp to  &nbsp
                     <%=deparr.get(i).getArrival()%></p>               
                 </option>
-                <% } %>
+                <% }%>
             </select>                                              
             <span><input id="input_submit_da" type="submit" value="SUBMIT"></span> 
             <h2>Selected travel period from:  &nbsp<%=deparr.get(dasint).getDeparture()%> &nbsp to  &nbsp <%=deparr.get(dasint).getArrival()%>. Please select a free room.</h2>
         </form>
 
         <div id="all_wrapper">
-        <div id="cruiser_wrapper">
+            <div id="cruiser_wrapper">
 
 
-            <div id="tab_3f_1">
-                <%for (int i = 0; i <= 20; i++) {%>
-                <div class="tooltip" id="field_3f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_3f_1">
+                    <%for (int i = 0; i <= 20; i++) {%>
+                    <div class="tooltip" id="field_3f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%>
 
+                    </div>
+                    <% } %>
                 </div>
-                <% } %>
-            </div>
 
-            <div id="tab_3f_2">
-                <%for (int i = 21; i <= 37; i++) {%>
-                <div class="tooltip" id="field_3f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_3f_2">
+                    <%for (int i = 21; i <= 37; i++) {%>
+                    <div class="tooltip" id="field_3f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_4f_1">
-                <%for (int i = 38; i <= 41; i++) {%>
-                <div class="tooltip" id="field_4f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_4f_1">
+                    <%for (int i = 38; i <= 41; i++) {%>
+                    <div class="tooltip" id="field_4f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_4f_2">
-                <%for (int i = 42; i <= 45; i++) {%>
-                <div class="tooltip" id="field_4f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_4f_2">
+                    <%for (int i = 42; i <= 45; i++) {%>
+                    <div class="tooltip" id="field_4f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_4f_3">
-                <%for (int i = 46; i <= 51; i++) {%>
-                <div class="tooltip" id="field_4f_3<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_4f_3">
+                    <%for (int i = 46; i <= 51; i++) {%>
+                    <div class="tooltip" id="field_4f_3<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_4f_4">
-                <%for (int i = 52; i <= 57; i++) {%>
-                <div class="tooltip" id="field_4f_4<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_4f_4">
+                    <%for (int i = 52; i <= 57; i++) {%>
+                    <div class="tooltip" id="field_4f_4<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
 
-            <div id="tab_6f_1">
-                <%for (int i = 58; i <= 62; i++) {%>
-                <div class="tooltip" id="field_6f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_6f_1">
+                    <%for (int i = 58; i <= 62; i++) {%>
+                    <div class="tooltip" id="field_6f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_6f_2">
-                <%for (int i = 63; i <= 67; i++) {%>
-                <div class="tooltip" id="field_6f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_6f_2">
+                    <%for (int i = 63; i <= 67; i++) {%>
+                    <div class="tooltip" id="field_6f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_7f_1">
-                <%for (int i = 68; i <= 87; i++) {%>
-                <div class="tooltip" id="field_7f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_7f_1">
+                    <%for (int i = 68; i <= 87; i++) {%>
+                    <div class="tooltip" id="field_7f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_7f_2">
-                <%for (int i = 88; i <= 107; i++) {%>
-                <div class="tooltip" id="field_7f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_7f_2">
+                    <%for (int i = 88; i <= 107; i++) {%>
+                    <div class="tooltip" id="field_7f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_8f_1">
-                <%for (int i = 108; i <= 110; i++) {%>
-                <div class="tooltip" id="field_8f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_8f_1">
+                    <%for (int i = 108; i <= 110; i++) {%>
+                    <div class="tooltip" id="field_8f_1<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% } %>
-            </div>
+                        <% } %>
+                </div>
 
-            <div id="tab_8f_2">
-                <%for (int i = 111; i <= 113; i++) {%>
-                <div class="tooltip" id="field_8f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
-                    if (st.equals("reserved")) {
-                        out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
-                    } else {
-                    %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                        <%out.print(da.get(i).getId());%></a> <%
+                <div id="tab_8f_2">
+                    <%for (int i = 111; i <= 113; i++) {%>
+                    <div class="tooltip" id="field_8f_2<%out.print(da.get(i).getFree());%>"><% String st = da.get(i).getFree();
+                        if (st.equals("reserved")) {
+                            out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
+                            } else {
+                        %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
+                            <%out.print(da.get(i).getId());%></a> <%
                             }%></div>
-                    <% }%>
+                        <% }%>
+                </div>
             </div>
         </div>
-        </div>
-           
+
         <%@include file="navBar.jsp" %>
         <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/cruiserTable.js"></script>

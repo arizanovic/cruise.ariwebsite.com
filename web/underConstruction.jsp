@@ -4,7 +4,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>cruise.ARIwebsite.com</title>
+        <link rel="shortcut icon" href="img/titl_ari.png"/>
         <link rel="stylesheet" href="css/style_index.css">
         <link rel="stylesheet" href="css/underConstructionForbidden.css">
         <link rel="stylesheet" href="css/temp.css">

@@ -50,7 +50,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/reservation.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>cruise.ARIwebsite.com</title>
+        <link rel="shortcut icon" href="img/titl_ari.png"/>
     </head>
     <body>
         <%@include file="temp.jsp" %>
