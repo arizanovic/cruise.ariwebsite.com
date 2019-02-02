@@ -1,0 +1,21 @@
+#kosutnjak{
+    float: left;
+    opacity: 0.5;  
+}
+
+#kosutnjak a{
+    text-decoration: none;
+}
+
+#kosutnjak_p{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#kosutnjak_tab{
+    background: rgba(255,255,255,0.5);
+    width: 750px;
+}
+

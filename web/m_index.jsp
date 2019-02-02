@@ -10,31 +10,119 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/style_m_index.css"/>
+        <link rel="stylesheet" href="css/m_temp.css">
     </head>
     <body> 
         
-        
-        <div class="main">
-        <div class="wrapper">
-            <div class="box a" onclick="window.location.href = 'underConstruction.jsp'">CASINO</div>
-            <div class="box b" onclick="window.location.href = 'underConstruction.jsp'">UNDERWATER</div>
-            <div class="box c" onclick="window.location.href = 'underConstruction.jsp'">NIGHT PARTIES</div>
-            <div class="box e" onclick="window.location.href = 'underConstruction.jsp'">KAYAK EXPLORE</div>           
-            <div class="box f" onclick="window.location.href = 'underConstruction.jsp'">CLEAR WATER</div>
-            <div class="box g" onclick="window.location.href = 'underConstruction.jsp'">PRIVATE PARADISE</div>
-            <div class="box h" onclick="window.location.href = 'underConstruction.jsp'">DIVING</div>
-            <div class="box i" onclick="window.location.href = 'underConstruction.jsp'">BOAT EXPLORE</div>
-            <div class="box j" onclick="window.location.href = 'underConstruction.jsp'">BEACH MASSAGE</div>
-            <div class="box k" onclick="window.location.href = 'underConstruction.jsp'">RESTAURANT</div>
-            <div class="box l" onclick="window.location.href = 'underConstruction.jsp'">CINEMA</div>
-            <div class="box m" onclick="window.location.href = 'underConstruction.jsp'">FITNESS</div>
-        </div>
-        </div>
+  
+
+<div class="grid">
+    
+    
+  <div class="grid__item" >
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>KAYAK EXPLORE</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>PRIVATE PARADISE</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>BOAT EXPLORE</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>CASINO</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>CLEAR WATER</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content">
+      <div class="content-inside" onclick="window.location.href = 'underConstruction.jsp'">
+        <p>BEACH MASSAGE</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>NIGHT PARTIES</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>RESTAURANT</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>DIVING</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>FITNESS</p>
+      </div>
+    </div>
+  </div>
+    
+    <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>UNDERWATER</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid__item">
+    <div class="content" onclick="window.location.href = 'underConstruction.jsp'">
+      <div class="content-inside">
+        <p>CINEMA</p>
+      </div>
+    </div>
+  </div>
+    
+</div>
 
 
-        <%@include file="navBar.jsp" %>
+
+
+        <%@include file="m_navBar.jsp" %>
         <%@include file="nbs.jsp" %>
-        <%@include file="footer.jsp" %>
+<%@include file="m_footer.jsp" %>
     </body>
 </html>
 

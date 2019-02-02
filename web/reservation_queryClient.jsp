@@ -107,10 +107,10 @@
                     <option value="m">Male</option>
                     <option value="fm">Female</option>
                 </select>  <br>
-                AGE: <input class="input_text"  type="text" name="age"> <br>
+                AGE: <input class="input_text"  type="text" name="age" pattern="[0-9]*" /> <br>
                 CITY: <input class="input_text"  type="text" name="city"> <br> 
                 STREET: <input class="input_text"  type="text" name="street"> <br> 
-                HOUSE NUMBER: <input class="input_text"  type="text" name="house_n"> <br> 
+                HOUSE NUMBER: <input class="input_text"  type="text" name="house_n" pattern="[0-9]*" /> <br> 
                 PHONE NUMBER: <input class="input_text"  type="text" name="phone"> <br> 
                 PASSPORT NUMBER: <input class="input_text"  type="text" name="passport"> <br> 
 

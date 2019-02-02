@@ -81,10 +81,10 @@
                         <option value="m">Male</option>
                         <option value="fm">Female</option>
                     </select>  <br>
-                    AGE: <input class="input_text"  type="text" name="age"> <br>
+                    AGE: <input class="input_text"  type="text" name="age" pattern="[0-9]*" /> <br>
                     CITY: <input class="input_text"  type="text" name="city"> <br> 
                     STREET: <input class="input_text"  type="text" name="street"> <br> 
-                    HOUSE NUMBER: <input class="input_text"  type="text" name="house_n"> <br> 
+                    HOUSE NUMBER: <input class="input_text"  type="text" name="house_n" pattern="[0-9]*" /> <br> 
                     PHONE NUMBER: <input class="input_text"  type="text" name="phone"> <br> 
                     PASSPORT NUMBER: <input class="input_text"  type="text" name="passport"> <br> 
 
@@ -104,10 +104,10 @@
                         <option value="m">Male</option>
                         <option value="fm">Female</option>
                     </select>  <br>
-                    AGE: <input id="age" class="input_text"  type="text" name="age"> <br>
+                    AGE: <input id="age" class="input_text"  type="text" name="age" pattern="[0-9]*" /> <br>
                     CITY: <input id="city" class="input_text"  type="text" name="city"> <br> 
                     STREET: <input id="street" class="input_text"  type="text" name="street"> <br> 
-                    HOUSE NUMBER: <input id="house_n" class="input_text"  type="text" name="house_n"> <br> 
+                    HOUSE NUMBER: <input id="house_n" class="input_text"  type="text" name="house_n" pattern="[0-9]*" /> <br> 
                     PHONE NUMBER: <input id="phone" class="input_text"  type="text" name="phone"> <br> 
                     PASSPORT NUMBER: <input id="passport" class="input_text"  type="text" name="passport"> <br> 
                     <input class="input_submit"  type="submit" name="action"
