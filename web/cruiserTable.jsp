@@ -38,17 +38,17 @@
         <title>cruise.ARIwebsite.com</title>
         <link rel="shortcut icon" href="img/titl_ari.png"/>
         <script src="js/navBar.js"></script> 
+        
+        <link rel="stylesheet" media="screen and (min-width: 1440px)"  href="css/cruiserTable.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 1440px)"  href="css/m_cruiserTable.css"/>
+        
     </head>
     <body>
         <%
             if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%> 
-            <link rel="stylesheet" type="text/css" href="css/temp_cruiserTable.css">
-            <link rel="stylesheet" type="text/css" href="css/exchangeRate.css">
+        <link rel="stylesheet" type="text/css" href="css/temp_cruiserTable.css">
+        <link rel="stylesheet" type="text/css" href="css/exchangeRate.css">
         <%@include file='temp.jsp' %><%@include file='exchangeRate.jsp' %>
-        <link rel="stylesheet" type="text/css" href="css/cruiserTable.css">
-        <%} else {
-        %>
-        <link rel="stylesheet" type="text/css" href="css/m_cruiserTable.css">
         <%}%>
 
         <br><br><br><br><br><br>
@@ -96,7 +96,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -108,7 +108,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -120,7 +120,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -132,7 +132,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -144,7 +144,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -157,7 +157,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -169,7 +169,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -181,7 +181,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -193,7 +193,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -205,7 +205,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% } %>
                 </div>
 
@@ -217,7 +217,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                         <%out.print(da.get(i).getId());%></a> <%
-                                }%></div>
+                            }%></div>
                         <% }%>
                 </div>
             </div>
@@ -225,15 +225,13 @@
 
 
         <%
-                            if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%>   
+            if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%>   
         <%@include file="navBar.jsp" %>
-        <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/cruiserTable.js"></script>
         <%} else {
         %>
         <%@include file="m_navBar.jsp" %>
-        <%@include file="m_footer.jsp" %>
         <%}%>
-
+        <%@include file="footer.jsp" %>
     </body>
 </html>

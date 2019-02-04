@@ -3,15 +3,13 @@
     height: 200px;
     background-color: #595959;
     float: bottom;
-    float: left;
-    padding-top: 20px; 
     position: absolute;
     left: 0px;
 }
 
 #newsletter_table{
     border-collapse: collapse; 
-    
+
 }
 
 #newsletter_table{
@@ -46,10 +44,24 @@
 
 #logo_footer{
     float: right;
-    padding-right: 30%;
-    padding-top: 30px; 
+    margin-right: 30%;
+    margin-top: 60px; 
     cursor: pointer;
 }
+
+#logo_footer > img{
+    height: 60px;
+    
+}
+
+#AllRights{
+    float: right;
+    padding-right: 27%;
+    cursor: pointer;    
+    color: #d9d9d9;
+    font-size: 10px;
+}
+
 
 /**************************/
 
@@ -72,19 +84,12 @@ div#page {
 }
 /*****^^^^^jQuery scrollToTop^^^^^^******/
 
-#AllRights{
-    float: right;
-    padding-right: 27%;
-    cursor: pointer;    
-    color: #d9d9d9;
-    font-size: 12px;
-}
 
 #about_table{   
     border-spacing: 10px 5px;
     float: right;
-    padding-right: 140px;
-    
+    margin-right: 50px;
+
 }
 
 #about_table td{
@@ -97,14 +102,15 @@ div#page {
 
 #social_networks{
     float: bottom;
-    padding-left: 58px; 
+    padding-left: 10px; 
     padding-top: 60px;
     cursor: pointer;
-    
+
 }
 
 #fb_logo{
     opacity: 0.3;
+    height: 40px;
 }
 
 #fb_logo:hover{
@@ -113,6 +119,7 @@ div#page {
 
 #in_logo{
     opacity: 0.3;
+    height: 40px;
 }
 #in_logo:hover{
     opacity: 1;
@@ -120,6 +127,7 @@ div#page {
 
 #tw_logo{
     opacity: 0.3;
+    height: 40px;
 }
 #tw_logo:hover{
     opacity: 1;
@@ -141,7 +149,8 @@ div#page {
     display: grid;
     grid-gap: 15px;
     grid-template-columns: 23% 50% 23%;  
-    grid-template-rows: 180px;    
+    grid-template-rows: 180px; 
+
 }
 
 
@@ -154,6 +163,7 @@ div#page {
     font-size: 150%;
     color: #fff;
     padding: 20px; 
+
 }
 
 
@@ -166,6 +176,7 @@ div#page {
     font-size: 150%;
     color: #fff;
     padding: 20px; 
+
 }
 
 
@@ -179,6 +190,7 @@ div#page {
     font-size: 150%;
     color: #fff;
     padding: 20px; 
+        
 }
 
 

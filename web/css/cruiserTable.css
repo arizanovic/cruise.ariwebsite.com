@@ -135,14 +135,20 @@ body{
     height: 20px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_3f_1reserved{
     background-color: #cccccc;
     height: 20px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -159,14 +165,20 @@ body{
     height: 20px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_3f_2reserved{
     background-color: #cccccc;
     height: 20px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -183,14 +195,20 @@ body{
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_4f_1reserved{
     background-color: #cccccc;
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -208,14 +226,20 @@ body{
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_4f_2reserved{
     background-color: #cccccc;
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -233,14 +257,20 @@ body{
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_4f_3reserved{
     background-color: #cccccc;
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -258,14 +288,20 @@ body{
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_4f_4reserved{
     background-color: #cccccc;
     height: 28px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -282,14 +318,20 @@ body{
     height: 37px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_6f_1reserved{
     background-color: #cccccc;
     height: 37px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -306,14 +348,20 @@ body{
     height: 37px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_6f_2reserved{
     background-color: #cccccc;
     height: 37px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -330,14 +378,20 @@ body{
     height: 24px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_7f_1reserved{
     background-color: #cccccc;
     height: 24px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -354,14 +408,20 @@ body{
     height: 24px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_7f_2reserved{
     background-color: #cccccc;
     height: 24px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -378,14 +438,20 @@ body{
     height: 38px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_8f_1reserved{
     background-color: #cccccc;
     height: 38px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -402,14 +468,20 @@ body{
     height: 38px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #field_8f_2reserved{
     background-color: #cccccc;
     height: 38px;
     width: 34px;
     border: solid black 1px;
-    border-radius: 2px;   
+    border-radius: 2px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tooltip {

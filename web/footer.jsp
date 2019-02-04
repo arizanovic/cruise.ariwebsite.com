@@ -11,13 +11,9 @@
 %>
 
 
-<link rel="stylesheet" href="css/footer<% if (gender_footer.equals("fm")) {
-        out.print("_fm");
-    }%>.css">
+<link rel="stylesheet" href="css/footer.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="js/scrollToTop.js"></script>
-
-
 
 
 <div id="footer">
@@ -103,9 +99,11 @@
 
         <div id="social_networks">
             <table>
-                <tr><a href="https://www.facebook.com/" id="fb_logo"><img src="img/fb_logo1.png" height="50px"></a></tr>
-                <tr><a href="https://www.linkedin.com/" id="in_logo"><img src="img/linkedin_logo.png" height="50px"></a></tr>
-                <tr><a href="https://twitter.com/" id="tw_logo"><img src="img/twiter_logo.png" height="50px"></a></tr>
+                <tr>
+                    <td><a href="https://www.facebook.com/"><div id="fb_logo"><img src="img/fb_logo1.png" height="100%"></div></a></td>
+                    <td><a href="https://www.linkedin.com/"><div id="in_logo"><img src="img/linkedin_logo.png" height="100%"></div></a></td>
+                    <td><a href="https://twitter.com/"><div id="tw_logo"><img src="img/twiter_logo.png" height="100%"></div></a></td>
+                </tr>
             </table>
         </div>
     </div>
