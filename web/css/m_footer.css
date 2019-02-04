@@ -3,8 +3,8 @@
     height: 200px;
     background-color: #595959;
     float: bottom;
-
-
+    position: absolute;
+    left: 0px;
 }
 
 #newsletter_table{

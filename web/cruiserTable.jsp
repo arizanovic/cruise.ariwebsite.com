@@ -37,28 +37,37 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>cruise.ARIwebsite.com</title>
         <link rel="shortcut icon" href="img/titl_ari.png"/>
-        <link rel="stylesheet" type="text/css" href="css/style_ct.css">
-        <link rel="stylesheet" type="text/css" href="css/cruiserTable.css">
-        <link rel="stylesheet" href="css/temp_cruiserTable.css">
         <script src="js/navBar.js"></script> 
     </head>
     <body>
-        <%@include file="temp.jsp" %>
-        <%@include file="exchangeRate.jsp" %>
+        <%
+            if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%> 
+            <link rel="stylesheet" type="text/css" href="css/temp_cruiserTable.css">
+            <link rel="stylesheet" type="text/css" href="css/exchangeRate.css">
+        <%@include file='temp.jsp' %><%@include file='exchangeRate.jsp' %>
+        <link rel="stylesheet" type="text/css" href="css/cruiserTable.css">
+        <%} else {
+        %>
+        <link rel="stylesheet" type="text/css" href="css/m_cruiserTable.css">
+        <%}%>
+
         <br><br><br><br><br><br>
 
         <form action="CruiserTableJavaServlet" method="get" id="input_da">
-            <span>DEPARTURE-ARRIVAL:</span>
-            <select id="input_text_da" name="departure_arrival_id" <!--onchange="cruTabValue()"--> > 
-                    <% for (int i = 0; i < deparr.size(); i++) {%>
-                    <option value="<%=deparr.get(i).getId()%>"> 
+            <span>SELECTED TRAVEL PERIOD:</span>
+
+            <select id="input_text_da" name="departure_arrival_id" <!--onchange="cruTabValue()"--> >
+                    <option value="<%=dass%>" hidden>&nbsp&nbsp from  &nbsp<%=deparr.get(dasint).getDeparture()%> &nbsp to  &nbsp <%=deparr.get(dasint).getArrival()%></option>
+                <% for (int i = 0; i < deparr.size(); i++) {%>
+                <option value="<%=deparr.get(i).getId()%>"> 
                 <p>&nbsp&nbsp from  &nbsp<%=deparr.get(i).getDeparture()%> &nbsp to  &nbsp
                     <%=deparr.get(i).getArrival()%></p>               
                 </option>
                 <% }%>
             </select>                                              
             <span><input id="input_submit_da" type="submit" value="SUBMIT"></span> 
-            <h2>Selected travel period from:  &nbsp<%=deparr.get(dasint).getDeparture()%> &nbsp to  &nbsp <%=deparr.get(dasint).getArrival()%>. Please select a free room.</h2>
+            <p>PLEASE SELECT A FREE (COLORED) ROOM ON A CRUISERSHIP SCHEMA TO MAKE BOOKING. &nbsp GRAY ROOMS ARE RESERVED.</p>
+
         </form>
 
         <div id="all_wrapper">
@@ -73,7 +82,7 @@
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
                             <%out.print(da.get(i).getId());%></a> <%
-                            }%>
+                                }%>
 
                     </div>
                     <% } %>
@@ -86,8 +95,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -98,8 +107,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -110,8 +119,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -122,8 +131,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -134,8 +143,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -147,8 +156,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -159,8 +168,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -171,8 +180,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -183,8 +192,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -195,8 +204,8 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% } %>
                 </div>
 
@@ -207,15 +216,24 @@
                             out.print(da.get(i).getId());%><p class="tooltiptext">ROOM <%out.print(da.get(i).getId());%> IS RESERVED</p><%
                             } else {
                         %> <a id="underline" href="Reservation_queryClientServlet?room_id=<%out.print(da.get(i).getId());%>&departure_arrival_id=<%=das%>">
-                            <%out.print(da.get(i).getId());%></a> <%
-                            }%></div>
+                        <%out.print(da.get(i).getId());%></a> <%
+                                }%></div>
                         <% }%>
                 </div>
             </div>
         </div>
 
+
+        <%
+                            if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%>   
         <%@include file="navBar.jsp" %>
         <%@include file="footer.jsp" %>
         <script type = "text/javascript" src="js/cruiserTable.js"></script>
+        <%} else {
+        %>
+        <%@include file="m_navBar.jsp" %>
+        <%@include file="m_footer.jsp" %>
+        <%}%>
+
     </body>
 </html>

@@ -78,9 +78,10 @@
                 <h2>BOOKING:</h2><br>
 
                 <p>ROOM NUMBER: &nbsp<%=roomId%> &nbsp&nbsp&nbsp&nbsp PRICE: <%=room.getPrice()%> euros</p>
-                <p>PERIOD: &nbsp<%=departure%> &nbspdo&nbsp <%=arrival%>
+                <p>PERIOD: &nbsp<%=departure%> &nbspto&nbsp <%=arrival%>
                 <p> ACTIVITY:   
                     <select class="input_text" id="activityClient" name="activity_id" onchange="activityNumberClient()"> 
+                        <option value="" selected disabled hidden>Choose activity</option>
                         <% for (int i = 0; i < activities.size(); i++) {%>
                         <option value="<%=activities.get(i).getId()%>"> 
                             <%=activities.get(i).getType()%>
@@ -93,6 +94,7 @@
 
                 <p> FOOD:                      
                     <select class="input_text" id="mealClient" name="meal_id" onchange="mealNumberClient()"> 
+                        <option value="" selected disabled hidden>Choose food</option>
                         <% for (int i = 0; i < meals.size(); i++) {%>
                         <option value="<%=meals.get(i).getId()%>"> 
                             <%=meals.get(i).getType()%>
@@ -105,6 +107,7 @@
                 FIRST NAME: <input class="input_text"  type="text" name="firstname"> <br>
                 LAST NAME: <input class="input_text"  type="text" name="lastname"> <br>
                 GENDER:    <select class="input_text"  name="gender">
+                    <option value="m" selected disabled hidden>Choose here</option>
                     <option value="m">Male</option>
                     <option value="fm">Female</option>
                 </select>  <br>
