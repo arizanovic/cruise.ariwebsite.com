@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.DepartureArrival;
 import model.Room;
+import model.User;
 
 @WebServlet(name = "Reservation_queryClientServlet", urlPatterns = {"/Reservation_queryClientServlet"})
 public class Reservation_queryClientServlet extends HttpServlet {
@@ -32,23 +33,41 @@ public class Reservation_queryClientServlet extends HttpServlet {
 
             //out.println("departure_arrival_id" + departure_arrival_id + "<br><br><br>");
             //out.println("room_id" + room_id + "<br><br><br>");
-
             request.getSession().setAttribute("roomId", room_id);
             request.getSession().setAttribute("departureArrivalId", departure_arrival_id);
 
+            Object idd_res = request.getSession().getAttribute("id");
+
+            if (idd_res != null) {
+                String id_res = idd_res.toString();
+                int idNum_res = Integer.parseInt(id_res);
+                ArrayList<User> user = DBQueries.getUsersFromId(idNum_res);
+                
+                String userFirstname = user.get(0).getFirstname();
+                request.getSession().setAttribute("userFirstname", userFirstname);
+                out.print(userFirstname);
+                
+                String userLastname = user.get(0).getLastname();
+                request.getSession().setAttribute("userLastname", userLastname);
+                out.print(userLastname);
+                
+                String userGender = user.get(0).getGender();
+                request.getSession().setAttribute("userGender", userGender);
+                out.print(userGender);
+
+            };
+
             try {
-                
-                
-                
+
                 ArrayList<DepartureArrival> deparr = DBQueries.getDepArr();
 
                 Date arr = deparr.get(departure_arrival).getArrival();
                 Date dep = deparr.get(departure_arrival).getDeparture();
- 
+
                 DateFormat ar = new SimpleDateFormat("yyyy-MM-dd");
                 String arrival = ar.format(arr);
                 DateFormat de = new SimpleDateFormat("yyyy-MM-dd");
-                String departure = de.format(dep);                
+                String departure = de.format(dep);
                 //out.println("arrival" + arrival + "<br>" + "departure" + "<br>" + departure + "<br><br><br>");                
                 //out.println("dep" + dep + "<br>" + "arr" + arr);
                 request.getSession().setAttribute("arrival", arrival);
@@ -59,6 +78,8 @@ public class Reservation_queryClientServlet extends HttpServlet {
             }
 
             response.sendRedirect("reservation_queryClient.jsp");
+        } catch (SQLException ex) {
+            Logger.getLogger(Reservation_queryClientServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

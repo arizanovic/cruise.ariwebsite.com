@@ -135,7 +135,8 @@
                     <input id="username_reservation" class="input_text" value="<%=id%>" type="hidden" name="user_id">
                     <h2>BOOKING QUERY:</h2><br>
                     <p> DEPARTURE-ARRIVAL:
-                        <select class="input_text" id="departure_arrival_id" onchange="val()" name="departure_arrival_id"> 
+                        <select class="input_text" id="departure_arrival_id" onchange="val()" name="departure_arrival_id">
+                            <option value="" selected disabled hidden>Choose perod</option>
                             <% for (int i = 0; i < deparr.size(); i++) {%>
                             <option value="<%=deparr.get(i).getId()%>"> 
                             <%=deparr.get(i).getDeparture()%> <p> do </p>
@@ -146,7 +147,7 @@
                     </p>
                     <p> FREE ROOMS:  
                         <select class="input_text" id="rooms" onchange="roomNumber()" name="room_id">
-
+                            
                         </select> 
                     </p>
                     <p>ROOM PRICE:</p>
@@ -156,6 +157,7 @@
 
                     <p> CLIENTS:   
                         <select class="input_text" id="clients" name="client_id"> 
+                            <option value="" selected disabled hidden>Choose client</option>
                             <% for (int i = 0; i < clients.size(); i++) {%>
                             <option value="<%=clients.get(i).getId()%>"> 
                             <%=clients.get(i).getFirstname()%> <p> </p>
@@ -168,7 +170,8 @@
 
 
                     <p> ACTIVITY:   
-                        <select class="input_text" id="activity" name="activity_id" onchange="activityNumber()"> 
+                        <select class="input_text" id="activity" name="activity_id" onchange="activityNumber()">
+                            <option value="" selected disabled hidden>Choose activity</option>
                             <% for (int i = 0; i < activities.size(); i++) {%>
                             <option value="<%=activities.get(i).getId()%>"> 
                                 <%=activities.get(i).getType()%>
@@ -182,7 +185,8 @@
 
 
                     <p> FOOD:                      
-                        <select class="input_text" id="meal" name="meal_id" onchange="mealNumber()"> 
+                        <select class="input_text" id="meal" name="meal_id" onchange="mealNumber()">
+                            <option value="" selected disabled hidden>Choose food</option>
                             <% for (int i = 0; i < meals.size(); i++) {%>
                             <option value="<%=meals.get(i).getId()%>"> 
                                 <%=meals.get(i).getType()%>

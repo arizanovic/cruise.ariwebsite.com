@@ -24,6 +24,7 @@
     String departureArrivalId = "";
     String arrival = "";
     String departure = "";
+
     try {
         Object room_id = request.getSession().getAttribute("roomId");
         roomId = room_id.toString();
@@ -33,15 +34,22 @@
         arrival = arriv.toString();
         Object depart = request.getSession().getAttribute("departure");
         departure = depart.toString();
+
+        Object uLastname = request.getSession().getAttribute("userLastname");
+        String userLastname = uLastname.toString();
+
     } catch (Exception e) {
-    }
+        e.printStackTrace();
+    };
 
 %>
 <%    int roomNum = Integer.parseInt(roomId);
     Room room = DBQueries.getRoomData(roomNum);
 
-
 %>
+
+
+
 
 
 <!DOCTYPE html>
@@ -59,90 +67,118 @@
         <%@include file="navBar.jsp" %>
 
 
-<div id="wrapper">
+        <div id="wrapper">
 
-        <div id="reservationInput">
-            <form ACTION="Reservation_queryClientInsertServlet" method="POST" onsubmit="return validateFieldsReservationQueryClientForm()" name="myForm" >
+            <div id="reservationInput">
+                <form ACTION="Reservation_queryClientInsertServlet" method="POST" onsubmit="return validateFieldsReservationQueryClientForm()" name="myForm" >
 
-                <input id="bank" class="input_text" value="<%=bank.get(0).getId()%>" type="hidden" name="bank_id">                
-                <input id="username_reservation" class="input_text" value="<%=id%>" type="hidden" name="user_id">
-                <input id="roomId" class="input_text" value="<%=roomId%>" type="hidden" name="roomId">
-
-
-                <input id="roomPrice" class="input_text" value="<%=room.getPrice()%>" type="hidden" name="roomPrice">
-                <input id="departure_arrival_id" class="input_text" value="<%=departureArrivalId%>" type="hidden" name="departure_arrival_id">
-                <input id="activityPriceClientInput" class="input_text" type="hidden" name="activityPriceClientInput">
-                <input id="mealPriceClientInput" class="input_text" type="hidden" name="mealPriceClientInput">
+                    <input id="bank" class="input_text" value="<%=bank.get(0).getId()%>" type="hidden" name="bank_id">                
+                    <input id="username_reservation" class="input_text" value="<%=id%>" type="hidden" name="user_id">
+                    <input id="roomId" class="input_text" value="<%=roomId%>" type="hidden" name="roomId">
 
 
-                <h2>BOOKING:</h2><br>
-
-                <p>ROOM NUMBER: &nbsp<%=roomId%> &nbsp&nbsp&nbsp&nbsp PRICE: <%=room.getPrice()%> euros</p>
-                <p>PERIOD: &nbsp<%=departure%> &nbspto&nbsp <%=arrival%>
-                <p> ACTIVITY:   
-                    <select class="input_text" id="activityClient" name="activity_id" onchange="activityNumberClient()"> 
-                        <option value="" selected disabled hidden>Choose activity</option>
-                        <% for (int i = 0; i < activities.size(); i++) {%>
-                        <option value="<%=activities.get(i).getId()%>"> 
-                            <%=activities.get(i).getType()%>
-                        </option>
-                        <% } %>
-                    </select> 
-                </p>
-                <p id="activityPriceClient"></p>
+                    <input id="roomPrice" class="input_text" value="<%=room.getPrice()%>" type="hidden" name="roomPrice">
+                    <input id="departure_arrival_id" class="input_text" value="<%=departureArrivalId%>" type="hidden" name="departure_arrival_id">
+                    <input id="activityPriceClientInput" class="input_text" type="hidden" name="activityPriceClientInput">
+                    <input id="mealPriceClientInput" class="input_text" type="hidden" name="mealPriceClientInput">
 
 
-                <p> FOOD:                      
-                    <select class="input_text" id="mealClient" name="meal_id" onchange="mealNumberClient()"> 
-                        <option value="" selected disabled hidden>Choose food</option>
-                        <% for (int i = 0; i < meals.size(); i++) {%>
-                        <option value="<%=meals.get(i).getId()%>"> 
-                            <%=meals.get(i).getType()%>
-                        </option>
-                        <% }%>
-                    </select> 
-                </p>
-                <p id="mealPriceClient"></p>
+                    <h2>BOOKING:</h2><br>
 
-                FIRST NAME: <input class="input_text"  type="text" name="firstname"> <br>
-                LAST NAME: <input class="input_text"  type="text" name="lastname"> <br>
-                GENDER:    <select class="input_text"  name="gender">
-                    <option value="m" selected disabled hidden>Choose here</option>
-                    <option value="m">Male</option>
-                    <option value="fm">Female</option>
-                </select>  <br>
-                AGE: <input class="input_text"  type="text" name="age" pattern="[0-9]*" /> <br>
-                CITY: <input class="input_text"  type="text" name="city"> <br> 
-                STREET: <input class="input_text"  type="text" name="street"> <br> 
-                HOUSE NUMBER: <input class="input_text"  type="text" name="house_n" pattern="[0-9]*" /> <br> 
-                PHONE NUMBER: <input class="input_text"  type="text" name="phone"> <br> 
-                PASSPORT NUMBER: <input class="input_text"  type="text" name="passport"> <br> 
+                    <p>ROOM NUMBER: &nbsp<%=roomId%> &nbsp&nbsp&nbsp&nbsp PRICE: <%=room.getPrice()%> euros</p>
+                    <p>PERIOD: &nbsp<%=departure%> &nbspto&nbsp <%=arrival%>
+                    <p> ACTIVITY:
+                        <select class="input_text" id="activityClient" name="activity_id" onchange="activityNumberClient()"> 
+                            <option value="" selected disabled hidden>Choose activity</option>
+                            <% for (int i = 0; i < activities.size(); i++) {%>
+                            <option value="<%=activities.get(i).getId()%>"> 
+                                <%=activities.get(i).getType()%>
+                            </option>
+                            <% } %>
+                        </select> 
+                    </p>
+                    <p id="activityPriceClient"></p>
 
 
-                <input class="input_submit" id="input_submit" type="submit" name="submit" value="REZERVISI">           
-            </form>
+                    <p> FOOD:                      
+                        <select class="input_text" id="mealClient" name="meal_id" onchange="mealNumberClient()"> 
+                            <option value="" selected disabled hidden>Choose food</option>
+                            <% for (int i = 0; i < meals.size(); i++) {%>
+                            <option value="<%=meals.get(i).getId()%>"> 
+                                <%=meals.get(i).getType()%>
+                            </option>
+                            <% }%>
+                        </select> 
+                    </p>
+                    <p id="mealPriceClient"></p>
+
+                    FIRST NAME: <input class="input_text"  type="text" name="firstname" value="<%
+                        if (session.getAttribute("userFirstname") != null) {
+                            Object uFirstname = request.getSession().getAttribute("userFirstname");
+                            String userFirstname = uFirstname.toString();
+                            out.print(userFirstname);
+                        };
+                                       %>"> <br>
+                    LAST NAME: <input class="input_text"  type="text" name="lastname"  value="<%
+                        if (session.getAttribute("userLastname") != null) {
+                            Object uLastname = request.getSession().getAttribute("userLastname");
+                            String userLastname = uLastname.toString();
+                            out.print(userLastname);
+                        };
+                                      %>"> <br>
+                    GENDER: <select class="input_text"  name="gender">
+                        <option value="<%
+                        if (session.getAttribute("userGender") != null) {
+                            Object uGender = request.getSession().getAttribute("userGender");
+                            String userGender = uGender.toString();
+                            out.print(userGender);
+                        };
+                                       %>" hidden><%
+                            if (session.getAttribute("userGender") != null) {
+                                Object uGender = request.getSession().getAttribute("userGender");
+                                String userGender = uGender.toString();
+                                if (userGender.equals("fm")) {
+                                    out.print("Female");
+                                } else {
+                                    out.print("Male");
+                                }
+                            };
+                            %></option>
+                        <option value="m">Male</option>
+                        <option value="fm">Female</option>
+                    </select>  <br>
+                    AGE: <input class="input_text"  type="text" name="age" pattern="[0-9]*" /> <br>
+                    CITY: <input class="input_text"  type="text" name="city"> <br> 
+                    STREET: <input class="input_text"  type="text" name="street"> <br> 
+                    HOUSE NUMBER: <input class="input_text"  type="text" name="house_n" pattern="[0-9]*" /> <br> 
+                    PHONE NUMBER: <input class="input_text"  type="text" name="phone"> <br> 
+                    PASSPORT NUMBER: <input class="input_text"  type="text" name="passport"> <br> 
+
+
+                    <input class="input_submit" id="input_submit" type="submit" name="submit" value="REZERVISI">           
+                </form>
+            </div>
+
+            <img id="reservationQueryClientImg" src="img/cruiser room<%if (roomNum >= 300 && roomNum < 400) {
+                    out.print("300");
+                } else if (roomNum >= 400 && roomNum < 500) {
+                    out.print("400");
+                } else if (roomNum >= 600 && roomNum < 700) {
+                    out.print("600");
+                } else if (roomNum >= 700 && roomNum < 800) {
+                    out.print("700");
+                } else if (roomNum >= 800 && roomNum < 900) {
+                    out.print("800");
+                }%>.jpg" >                                               
+
+
+
+            <div id="reservation_notice">
+                <p>*All prices are expressed in Euros per person</p>
+                <p>*Room prices are expressed in Euros per person per day</p>
+            </div>
         </div>
 
-        <img id="reservationQueryClientImg" src="img/cruiser room<%if (roomNum >= 300 && roomNum < 400) {
-                out.print("300");
-            } else if (roomNum >= 400 && roomNum < 500) {
-                out.print("400");
-            } else if (roomNum >= 600 && roomNum < 700) {
-                out.print("600");
-            } else if (roomNum >= 700 && roomNum < 800) {
-                out.print("700");
-            } else if (roomNum >= 800 && roomNum < 900) {
-                out.print("800");
-            }%>.jpg" >                                               
-
-
-
-        <div id="reservation_notice">
-            <p>*All prices are expressed in Euros per person</p>
-            <p>*Room prices are expressed in Euros per person per day</p>
-        </div>
-</div>
-        
         <%@include file="footer.jsp" %>
         <script type="text/javascript" src="js/validation.js" ></script>
         <script type = "text/javascript" src="js/reservation.js"></script>

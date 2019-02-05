@@ -32,7 +32,7 @@ public class RegistrationServlet extends HttpServlet {
                 boolean isRegistred = DBQueries.insertUser(u);
 
             if (isRegistred) { 
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("notice.jsp?redirect=login.jsp&text=Registration successfull! Please Login.");
                 
             
             }else{     
