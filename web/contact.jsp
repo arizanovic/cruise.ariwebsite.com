@@ -15,11 +15,22 @@
         <%@include file="exchangeRate.jsp" %>
         <%@include file="navBar.jsp" %>
         <br><br><br><br><br><br>
+
+        <%
+            if (request.getHeader("User-Agent").indexOf("Mobile") != -1) {%>
+        <div id="map">
+            <iframe width="600" height="300" frameborder="0" src="https://www.bing.com/maps/embed?h=300&w=600&cp=44.80012436332662~20.399632451854032&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+            </iframe>           
+        </div>
+
+        <%} else {%>
         <div id="map">
             <iframe width="800" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=800&cp=44.80012436332662~20.399632451854032&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
             </iframe>           
         </div>
-        
+        <%}%>
+
+
         <div id='contactus'>
             <form method="POST" action="SuggestionServlet"  onsubmit="return validateSugesstionForm()" name="myForm" >
 
@@ -39,15 +50,20 @@
             </p>
             <p>
                 E-mail:
-                
+
                 <a id="email_link" href="mailto:dusanarizanovic@yahoo.com">dusanarizanovic@yahoo.com</a>
             </p>
         </div>
         <div  id="qr">
             <img src="img/qr_crop.png">
         </div>
+<%
+            if (request.getHeader("User-Agent").indexOf("Mobile") == -1) {%>
         <br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br>
+        <%}else{%>
+<br><br><br><br><br><br><br><br>
+<%}%>
 
         <%@include file="footer.jsp" %>
     </body>

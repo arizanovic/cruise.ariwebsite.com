@@ -51,7 +51,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/client_user.css">
+        <link rel="stylesheet" media="screen and (min-width: 1440px)" href="css/client_user.css">
+        <link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/m_client_user.css">
         <link rel="stylesheet" href="css/temp.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>cruise.ARIwebsite.com</title>

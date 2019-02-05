@@ -1,5 +1,5 @@
 #wrapper{
-    height: 1270px;
+    height: 1020px;
 }
 
 #reservationInput {
@@ -8,7 +8,7 @@
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width: 18%;
+    width: 300px;
     position: absolute;
     top: 120px;
     
@@ -71,19 +71,19 @@
 }
 
 #reservationTable{
-    margin-left: 410px;
+    margin-left: 360px;
     height: 550px;
     overflow:auto;
     width: 1138px;
 }
 
 #reservationTable_q{
-    padding-left: 410px;
+    padding-left: 360px;
     padding-top: 120px;
 }
 
 #reservationTableReservation{
-    margin-left: 410px;
+    margin-left: 360px;
     margin-top: 120px;
     height: 830px;
     overflow:auto;
@@ -99,7 +99,7 @@
     font-weight: 600;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     position: absolute;
-    top: 1200px;
+    top: 950px;
 }
 
 #activityPriceClient {

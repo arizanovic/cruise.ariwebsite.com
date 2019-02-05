@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
                 if (isLogin) {
                     try {
                         String role = DBQueries.getRoleByUsername(username);
-                        response.sendRedirect("notice.jsp?redirect=index.jsp&text=Login successfull as <span style=\"font-size:40px;\">" + username + "</span>!");
+                        response.sendRedirect("notice.jsp?redirect=index.jsp&text=Login successful as <span style=\"font-size:40px;\">" + username + "</span>!");
                         request.getSession().setAttribute("username", username);
                         request.getSession().setAttribute("role", role);
                         String id = DBQueries.getIdByUsername(username);
