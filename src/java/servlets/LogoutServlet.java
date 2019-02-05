@@ -29,7 +29,7 @@ public class LogoutServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             request.getSession().invalidate();
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("notice.jsp?redirect=index.jsp&text=Good rest of the day!");
         }
     }
 

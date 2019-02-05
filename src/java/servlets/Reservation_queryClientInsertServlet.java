@@ -89,7 +89,7 @@ public class Reservation_queryClientInsertServlet extends HttpServlet {
 
             DBQueries.insertReservation_query(r);
             
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("notice.jsp?redirect=index.jsp&text=You successfully send booking query. <p>Expect the phone call soon.<p>");
 
         } catch (SQLException ex) {
             ex.printStackTrace();
