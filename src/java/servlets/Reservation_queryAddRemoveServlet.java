@@ -84,7 +84,7 @@ public class Reservation_queryAddRemoveServlet extends HttpServlet {
                 
                 if (checkReg) {
                     out.print("<br><br>ne moze...vec je !!!!!!!!!!!!!");
-                    response.sendRedirect("reservation_query.jsp");
+                    response.sendRedirect("notice.jsp?redirect=reservation_query.jsp&text=That room is already reserved in that period!");
                 } else {
                     out.print("<br><br>insertuj!!!!!!!!!!!!!");
                     User user = new User(res_q_user_id);
