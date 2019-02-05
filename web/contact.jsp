@@ -1,9 +1,3 @@
-<%-- 
-    Document   : contact
-    Created on : Dec 26, 2018, 12:00:28 AM
-    Author     : Administrator
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -58,3 +52,4 @@
         <%@include file="footer.jsp" %>
     </body>
 </html>
+

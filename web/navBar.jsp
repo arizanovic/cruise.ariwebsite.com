@@ -22,9 +22,8 @@
 <% Reservation_query rq = DBQueries.getNumberOfRowsForNotification(); %>
 
 <script src="js/navBar.js"></script>
-<link rel="stylesheet" href="css/navBar<% if (gender.equals("fm")) {
-        out.print("_fm");
-    }%>.css">
+<link rel="stylesheet" media="screen and (min-width: 1440px)"  href="css/navBar<% if (gender.equals("fm")) {out.print("_fm");}%>.css">
+<link rel="stylesheet" media="screen and (max-width: 1440px)"  href="css/m_navBar<% if (gender.equals("fm")) {out.print("_fm");}%>.css">
 
 
 

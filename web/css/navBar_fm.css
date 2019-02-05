@@ -1,26 +1,30 @@
 #navbar {
-  background-color: #fcccff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: block;
-  transition: top 0.3s;
-  left: 0px;
+    background-color: #fcccff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    left: 0px;
+    z-index: 5;
 }
 
 #navbar a {
-  float: left;
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 20px;
-  text-decoration: none;
-  font-size: 17px;  
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 17px;  
 }
 
 #navbar a:hover {
-  background-color: #f899ff;
-  color: black;
+    background-color: #f899ff;
+    color: black;
 }
 
 
@@ -39,8 +43,8 @@
 
 
 #notification_bell{
-background-image: url("../img/notification_bell_100.png");
-background-size: 15px;
+    background-image: url("../img/notification_bell_100.png");
+    background-size: 15px;
     background-repeat: no-repeat; 
     height: 20px;
     width: 30px;

@@ -1,0 +1,56 @@
+#navbar {
+  background-color: #fcccff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  left: 0px;
+  z-index: 5;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  text-decoration: none;
+  font-size: 14px;  
+}
+
+#navbar a:hover {
+  background-color: #f899ff;
+  color: black;
+}
+
+#navLogo{
+    height: 50px;
+    float: left;
+    padding-left: 15px;
+    padding-top: 5px; 
+    cursor: pointer;
+}
+
+#login{
+    float: right;
+    padding-right: 20px;
+}
+
+#notification_bell{
+background-image: url("../img/notification_bell_100.png");
+background-size: 15px;
+    background-repeat: no-repeat; 
+    height: 20px;
+    width: 30px;
+}
+
+#notification_count{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
